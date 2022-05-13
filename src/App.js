@@ -5,11 +5,6 @@ import PromptForm  from './components/PromptForm';
 import ResponseContainer from './components/ResponseContainer';
 
 export default function App() {
-  console.log("API KEY")
-  console.log(process.env.API_KEY)
-  console.log(process.env.TEST)
-  console.log(process.env.REACT_APP_TEST)
-
   const [responses, setResponses] = useState([])
   
   return (
@@ -27,8 +22,6 @@ export default function App() {
   );
 
   async function handleUserInput(prompt, currentEngine){
-    const apiKey = "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"
-
     const data = {
       prompt,
       temperature: 0.5,
@@ -42,7 +35,7 @@ export default function App() {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
-        Authorization: `Bearer ${apiKey}`,
+        Authorization: `Bearer ${process.env.REACT_APP_API_KEY}`,
       },
       body: JSON.stringify(data),
     })
