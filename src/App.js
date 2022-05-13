@@ -5,6 +5,11 @@ import PromptForm  from './components/PromptForm';
 import ResponseContainer from './components/ResponseContainer';
 
 export default function App() {
+  console.log("API KEY")
+  console.log(process.env.API_KEY)
+  console.log(process.env.TEST)
+  console.log(process.env.TOKEN)
+  
   const [responses, setResponses] = useState([])
   
   return (
@@ -22,11 +27,6 @@ export default function App() {
   );
 
   async function handleUserInput(prompt, currentEngine){
-    console.log("API KEY")
-    console.log(process.env.API_KEY)
-    console.log(process.env.TEST)
-    console.log(process.env.TOKEN)
-
     const apiKey = "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"
 
     const data = {
