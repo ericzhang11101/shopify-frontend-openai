@@ -1,0 +1,12 @@
+.response-list{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 75vw; 
+    padding: 0 2rem;
+    /* overflow-y: scroll; */
+}
+
+.response-container{ 
+    margin-bottom: 1rem;
+}
