@@ -3,11 +3,6 @@ import React, {useState} from 'react'
 import './App.css';
 import PromptForm  from './components/PromptForm';
 import ResponseContainer from './components/ResponseContainer';
-const path = require('path');
-require('dotenv').config({
-  path: path.resolve(process.cwd(), 'client', '.env.development'), 
-  debug: true}
-);
 
 export default function App() {
   console.log("API KEY")
