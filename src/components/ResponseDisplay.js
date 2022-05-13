@@ -9,7 +9,6 @@ export default function ResponseDisplay(props) {
             "backgroundColor": `hsl(${props.hue}, 90%, 75%)`,
             "borderColor": `hsl(${props.hue}, 40%, 50%)`
         }}
-        key={hue}
     >
         <div className="response-row">
             <h3>

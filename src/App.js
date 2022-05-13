@@ -22,16 +22,18 @@ export default function App() {
   );
 
   async function handleUserInput(prompt, currentEngine){
+    console.log("API KEY")
+    console.log(process.env.API_KEY)
     const apiKey = "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"
 
     const data = {
       prompt,
       temperature: 0.5,
-      max_tokens: 64,
+      max_tokens: 128,
       top_p: 1.0,
       frequency_penalty: 0.0,
       presence_penalty: 0.0,
-      };
+    };
       
     const response = await fetch(`https://api.openai.com/v1/engines/${currentEngine}/completions`, {
       method: "POST",

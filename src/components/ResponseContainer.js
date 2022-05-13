@@ -18,6 +18,7 @@ export default function ResponseContainer(props) {
                             <ResponseDisplay 
                                 prompt={res.prompt}
                                 response={res.response}
+                                key={Math.floor(360*(responses.length - index)/responses.length)}
                                 hue={Math.floor(360*(responses.length - index)/responses.length)}
                             />
                         )

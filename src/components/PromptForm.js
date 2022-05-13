@@ -81,7 +81,10 @@ export default function PromptForm(props) {
                         {
                             options.map((option) => {
                                 return (
-                                    <option value={option.prompt}>
+                                    <option 
+                                        value={option.prompt}
+                                        key={option.value}
+                                    >
                                         {option.value}
                                     </option>
                                 )
@@ -149,7 +152,7 @@ export default function PromptForm(props) {
     async function handleSubmit(){
         const prompt = textInput
 
-        if (prompt.length === 0){
+        if (prompt && prompt.length === 0){
             setDisplayErrorMessage(true)
             setTimeout(() => {
                 setDisplayErrorMessage(false)
